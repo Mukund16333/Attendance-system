@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Dashboard</title>
+    <meta http-equiv="refresh" content="5">
+    <style>
+        body { font-family: Arial; text-align: center; }
+        table { margin: auto; border-collapse: collapse; width: 60%; }
+        th, td { border: 1px solid black; padding: 10px; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+    <h2>Live Attendance</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Time</th>
+        </tr>
+        {% for row in records %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
